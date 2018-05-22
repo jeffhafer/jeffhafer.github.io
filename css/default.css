@@ -235,7 +235,7 @@ margin:10px 0 8px;
 /*** Footer ***/
 
 #footer {
-border-top:4px solid #dadada;
+border-top:1px solid #dadada;
 clear:both;
 color:gray;
 font-size:0.9em;
@@ -243,6 +243,7 @@ line-height:1.6em;
 margin:0 auto;
 padding:8px 0;
 text-align:right;
+width: 750px;
 }
 
 #footer p {
