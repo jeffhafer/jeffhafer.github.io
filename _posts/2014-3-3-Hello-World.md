@@ -6,11 +6,11 @@ published: true
 
 1. Forked project: https://github.com/barryclark/jekyll-now
 2. Added a few plugins to config from: https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
-..1 Sitemap - Already installed
-..2 SEO Optimization
-..3 Atom (RSS) feeds - Already installed
-..4 Redirects
-..5 Emoji
+  1. Sitemap - Already installed
+  2. SEO Optimization
+  3. Atom (RSS) feeds - Already installed
+  4. Redirects
+  5. Emoji
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
