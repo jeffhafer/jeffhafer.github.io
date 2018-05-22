@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Github and Jekyll
+published: true
 ---
 
 1. Forked project: https://github.com/barryclark/jekyll-now
