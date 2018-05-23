@@ -10,11 +10,11 @@ published: true
 		
 		<script>
         var hash = window.location.hash;
-        alert(hash);
+        console.log("Raw hash: " + hash);
         if (hash != ""){
-	    var hash = hash.replace("#", "");
+	    //var hash = hash.replace("#", "");
             //Something was submitted. Do a search
-	    alert("Searching for: " + hash);
+	    console.log("Searching for: " + hash);
 	    
             document.write('{% assign sorted_posts = site.posts | sort: "title" %}')
             document.write('{% for post in sorted_posts %}');
