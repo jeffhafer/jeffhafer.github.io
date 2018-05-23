@@ -5,11 +5,27 @@ sitemap: false
 title: Code Posts
 ---
 
-<div id="home">
-  <h2 class="yellow">Amazon Web Services</h2>
-  <ul class="posts">
-    {% for post in site.categories.aws %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+<div>
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+        <span class="site-tag">
+            <a href="#{{ category | first | slugify }}">
+                    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
+            </a>
+        </span>
     {% endfor %}
-  </ul>
+</div>
+
+<div id="index">
+    {% for category in categories %}
+        <a name="{{ category[0] }}"></a>
+        <h2>{{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})</h2>
+        {% assign sorted_posts = site.posts | sort: 'title' %}
+        {% for post in sorted_posts %}
+            {%if post.categories contains category[0]%}
+                <h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
+                <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+            {%endif%}
+        {% endfor %}
+    {% endfor %}
 </div>
