@@ -18,20 +18,17 @@ published: true
 	    document.write('{% assign sorted_posts = site.posts | sort: "title" %}');
             document.write('{% for post in sorted_posts %}');
             document.write('    {%if post.categories contains "' + cat + '" %}');
-	    </script>
-            	<h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
-            	<p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-            <script>
+	    document.write('-test-');
+	    document.write('<h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>');
+            document.write('<p>{{ post.excerpt | strip_html | truncate: 160 }}</p>');
 	    document.write('    {%endif%}');
             document.write('{% endfor %}');
 	    console.log("--Done--");
         } else {
             //Show everything
             document.write('{% for post in site.posts %}');
-	    </script>
-            <li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
-	    <script>
-            document.write('{% endfor %}');
+	    document.write('<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
+	    document.write('{% endfor %}');
         }
 		</script>
   </ul>
