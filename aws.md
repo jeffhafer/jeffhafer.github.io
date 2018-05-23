@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /aws/
+sitemap: false
 title: Code Posts
 ---
 
