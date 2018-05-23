@@ -5,13 +5,6 @@ layout: default
 {{ content }}
 </div>
 
-<span>[
-  {% for tag in page.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-  {% endfor %}
-]</span>
-
 <div id="related">
   <h3>Possibly Related Posts</h3>
   <ul class="posts">
