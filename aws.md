@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /aws/
 title: Code Posts
 ---
 
