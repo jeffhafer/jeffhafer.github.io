@@ -15,7 +15,7 @@ published: true
         if (cat != ""){
 	    console.log("Searching for: " + cat);
 		
-	     html = "";
+	    var html = "";
 	    
             html += '{% assign sorted_posts = site.posts | sort: "title" %}';
             html += '{% for post in sorted_posts %}';
