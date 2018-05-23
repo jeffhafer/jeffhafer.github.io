@@ -27,3 +27,10 @@ dp.SyntaxHighlighter.ClipboardSwf = 'http://communicatopia.s3.amazonaws.com/js/c
 //name, showGutter, showControls, collapseAll, firstLine , showColumns
 dp.SyntaxHighlighter.HighlightAll('code',false, false,false,1,false);
 </script>
+
+<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  {% endfor %}
+]</span>
