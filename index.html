@@ -20,7 +20,7 @@ published: true
             document.write('		{{ post.title }} - {{ post.categories | downcase }} <br>');
 	
 	    document.write("    	post.categories before - {{ post.categories }} <br>");
-	    document.write('		{% for category in post.categories %}
+	    document.write('		{% for category in post.categories %}');
 	    document.write('			post.category: {{ category }}');
 	    document.write('    		{% if category = \'github\' %}');
 	    document.write('    			Category found: {{ category }}');
