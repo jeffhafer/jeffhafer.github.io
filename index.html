@@ -21,8 +21,6 @@ published: true
 	    document.write('		Contains? - {{ post.categories | downcase contains "' + cat + '" }} <br>');
 		
 	    document.write("    	post.categories before - {{ post.categories }} <br>");
-	    document.write("    	{% assign post.categories = post.categories | downcase %}");
-	    document.write("    	post.categories after - {{ post.categories }} <br>");
 		
 	    document.write("    	{% if post.categories contains 'github' %}");
 	    document.write('			-inside if-');
