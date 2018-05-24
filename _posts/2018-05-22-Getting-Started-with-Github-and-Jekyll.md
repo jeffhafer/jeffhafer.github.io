@@ -1,4 +1,5 @@
 ---
+categories: ["github"]
 layout: post
 title: Getting Started with Github and Jekyll
 published: true
