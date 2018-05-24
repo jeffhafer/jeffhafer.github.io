@@ -19,7 +19,7 @@ published: true
 	    document.write('    {% for post in sorted_posts %}');
             document.write('		{{ post.title }} - {{ post.categories }} <br>');
 
-	    document.write('    	{% if post.categories contains 'Markdown' %}
+	    document.write('    	{% if post.categories contains 'Markdown' %}');
 	    document.write('			-inside if-');
 	    document.write('			<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('    	{%endif%}');
