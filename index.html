@@ -18,8 +18,14 @@ published: true
 	    document.write('{% assign sorted_posts = site.posts | sort: "title" %}');
 	    document.write('    {% for post in sorted_posts %}');
             document.write('		{{ post.title }} - {{ post.categories | downcase }} <br>');
-		
+	
 	    document.write("    	post.categories before - {{ post.categories }} <br>");
+	    document.write('		{% for category in post.categories %}
+	    document.write('			post.category: {{ category }}');
+	    document.write('    		{% if category = \'github\' %}');
+	    document.write('    			Category found: {{ category }}');
+	    document.write('    		{%endif%}');
+	    document.write('		{% endfor %}');
 		
 	    document.write('    	{% if post.categories contains \'github\' %}');
 	    document.write('			-inside if-');
