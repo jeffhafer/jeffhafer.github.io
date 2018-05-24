@@ -22,6 +22,9 @@ published: true
 	    document.write("    	post.categories before - {{ post.categories }} <br>");
 	    document.write('		{% for category in post.categories %}');
 	    document.write('			category: {{ category }} <br>');
+		
+	    document.write('	if category == "' + cat + '" '); 
+		
 	    document.write('    		{% if category == "' + cat + '" %}');
 	    document.write('    			Category found: {{ category }} <br>');
 	    document.write('				<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
