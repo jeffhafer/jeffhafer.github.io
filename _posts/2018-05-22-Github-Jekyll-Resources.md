@@ -1,4 +1,5 @@
 ---
+categories: ["Github","Jekyll"]
 layout: post
 title: Github Jekyll Resources
 published: true
