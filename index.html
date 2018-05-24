@@ -22,7 +22,7 @@ published: true
 	    document.write("    	post.categories before - {{ post.categories }} <br>");
 	    document.write('		{% for category in post.categories %}');
 	    document.write('			category: {{ category }} <br>');
-	    document.write('    		{% if category == github %}');
+	    document.write('    		{% if category == "github" %}');
 	    document.write('    			Category found: {{ category }} <br>');
 	    document.write('    		{%endif%}');
 	    document.write('		{% endfor %}');
@@ -31,7 +31,7 @@ published: true
 	    document.write('			-inside if-');
 	    document.write('			<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('    	{%endif%}');
-	    document.write('		-after if-');
+	    document.write('		-after if- <br><br>');
             document.write('    {% endfor %}');
 	    console.log("--Done--");
         } else {
