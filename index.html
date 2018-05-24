@@ -23,11 +23,10 @@ published: true
 	    document.write('		{% for category in post.categories %}');
 	    document.write('			category: {{ category }} <br>');
 		
-	    switch(cat){
-		    case "aws":    document.write('{% if category == "aws" %}');    break;
-		    case "github": document.write('{% if category == "github" %}'); break;
-		    case "jekyll": document.write('{% if category == "jekyll" %}'); break;
-	    }
+	    if (cat == "aws"){    document.write('{% if category == "aws" %}'; }
+	    if (cat == "github"){ document.write('{% if category == "github" %}'); }
+	    if (cat == "jekyll"){ document.write('{% if category == "jekyll" %}'); }
+
 	    document.write('    			Category found: {{ category }} <br>');
 	    document.write('				<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('    		{%endif%}');
