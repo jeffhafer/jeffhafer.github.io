@@ -19,7 +19,10 @@ published: true
 	    document.write('    {% for post in sorted_posts %}');
 	    document.write('		{% for category in post.categories %}');
 		
-	    document.write('{% if category == "aws" %}');
+	    if (cat == "aws"){ document.write('{% if category == "aws" %}'); }
+	    if (cat == "github"){ document.write('{% if category == "github" %}'); }
+	    if (cat == "jekyll"){ document.write('{% if category == "jekyll" %}'); }
+		
 	    document.write('	<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('{%endif%}');
 	    document.write('{% endfor %}');
