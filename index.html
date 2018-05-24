@@ -17,25 +17,22 @@ published: true
 		
 	    document.write('{% assign sorted_posts = site.posts | sort: "title" %}');
 	    document.write('    {% for post in sorted_posts %}');
-            document.write('		{{ post.title }} - {{ post.categories | downcase }} <br>');
+            //document.write('		{{ post.title }} - {{ post.categories | downcase }} <br>');
 	
-	    document.write("    	post.categories before - {{ post.categories }} <br>");
+	    //document.write("    	post.categories before - {{ post.categories }} <br>");
 	    document.write('		{% for category in post.categories %}');
-	    document.write('			category: {{ category }} <br>');
+	    //document.write('			category: {{ category }} <br>');
 		
-	    document.write('	if category == "' + cat + '" '); 
+	    //document.write('	if category == "' + cat + '" '); 
 		
 	    document.write('    		{% if category == "' + cat + '" %}');
-	    document.write('    			Category found: {{ category }} <br>');
+	    //document.write('    			Category found: {{ category }} <br>');
 	    document.write('				<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('    		{%endif%}');
 	    document.write('		{% endfor %}');
 		
-	    document.write('    	{% if post.categories contains \'github\' %}');
-	    document.write('			-inside if-');
-	    document.write('			<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
-	    document.write('    	{%endif%}');
-	    document.write('		-after if- <br><br>');
+	    
+	    //document.write('		-after if- <br><br>');
             document.write('    {% endfor %}');
 	    console.log("--Done--");
         } else {
