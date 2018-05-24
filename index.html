@@ -23,14 +23,7 @@ published: true
 	    document.write('	<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>');
 	    document.write('{%endif%}');
 	    document.write('{% endfor %}');
-		
-	    //if (cat == "github"){ document.write('{% if category == "github" %}<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>{%endif%}{% endfor %}'); }
-	    //if (cat == "jekyll"){ document.write('{% if category == "jekyll" %}<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>{%endif%}{% endfor %}'); }
 
-	    
-		
-	    
-	    document.write('		-after if- <br><br>');
             document.write('    {% endfor %}');
 	    console.log("--Done--");
         } else {
