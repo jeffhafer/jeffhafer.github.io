@@ -10,7 +10,7 @@ published: true
         {% assign sorted_posts = site.posts | sort: "title" %}
         {% for post in sorted_posts %}
             {% for category in post.categories %}
-                {% if category == "aws" %}
+                {% if category == "github" %}
                     <li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
                 {%endif%}
             {% endfor %}
