@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Github Search
-permalink: jekyll/
+permalink: /jekyll/
 published: true
 ---
 
