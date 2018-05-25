@@ -21,19 +21,12 @@
 
 		<h1><a href="/"><div id="logo"></div>Topics</a></h1>
 		
-		<!--
-		<div class="slogan">
-				<a href="{{ site.baseurl }}/aws.html" class="yellow">AWS</a> :|: 
-				<a href="{{ site.baseurl }}/code.html" class="yellow">Code</a> :|: 
-				<a href="{{ site.baseurl }}/data.html" class="yellow">Data</a>
-		</div>
-		-->
 		<center>
 		<div>
 		    {% assign categories = site.categories | sort %}
 		    {% for category in categories %}
 			<span class="site-tag">
-			    <a href="?cat={{ category | first | slugify }}">
+			    <a href="{{ category | first | slugify }}">
 				    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
 			    </a>
 			</span>
