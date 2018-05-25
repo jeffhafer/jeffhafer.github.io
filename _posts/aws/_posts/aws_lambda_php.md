@@ -1,4 +1,5 @@
 ---
+categories: ['aws']
 layout: post
 title: AWS Lambda PHP
 published: true
