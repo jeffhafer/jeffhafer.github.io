@@ -4,6 +4,9 @@ title: Data Search
 permalink: /data/
 published: true
 ---
+<div id='page_title'>
+    <h2>Data</h2>
+</div>
 
 <div id="home">
     <ul class="posts">
