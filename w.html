@@ -128,7 +128,7 @@
 			$("#div_hourly").html(h);
 
 			var url = [];
-			$.getJSON( "http://api-ak.wunderground.com/api/c991975b7f4186c0/forecast10day/hourly10day/labels/astronomy10day/lang:EN/units:english/v:2.0/bestfct:1/q/zmw:47006.1.99999.json?ttl=300", function( jd ) {
+			$.getJSON( "https://api-ak.wunderground.com/api/c991975b7f4186c0/forecast10day/hourly10day/labels/astronomy10day/lang:EN/units:english/v:2.0/bestfct:1/q/zmw:47006.1.99999.json?ttl=300", function( jd ) {
 				$.each(jd.forecast.days, function(i,day){
 					//alert(day.summary.high);
 					$("#date" + i).html(day.summary.date.month + "/" + day.summary.date.day);
