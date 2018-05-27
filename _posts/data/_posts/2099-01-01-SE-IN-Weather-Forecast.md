@@ -155,7 +155,7 @@ published: true
 
 				var c = 0;
 				for (var ii=0; ii<10; ii++){
-					$("#t" + ii).load("proxy.php?url=" + url[ii] + " #historyTable", function(){
+					$("#t" + ii).load( url[ii] + " #historyTable", function(){
 						c++;
 						if (c == 10){
 							for (var iii=0; iii<10; iii++){
