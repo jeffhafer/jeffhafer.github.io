@@ -217,7 +217,7 @@ published: true
                         $("#time" + offset).html(hr + ":00");
                         $("#temp" + offset).html(hour.temperature);
                         $("#wc" + offset).html(hour.windchill);
-                        $("#img2" + offset).html("<img src='http:" + hour.icon_url + "'>");
+                        $("#img2" + offset).html("<img src='https:" + hour.icon_url + "'>");
                         $("#hum2" + offset).html(hour.humidity + "-" + hour.humidity);
                         $("#pop2" + offset).html(hour.pop + '%');
                         $("#rain" + offset).html(hour.liquid_precip);
