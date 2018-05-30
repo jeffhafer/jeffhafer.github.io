@@ -1,3 +1,9 @@
+---
+categories: ["data"]
+layout: post
+title: Gas Prices
+published: true
+---
 2018.05.29 , Tue , -.03 , 2.92 , -.10 , 3.19
 2018.05.16 , Wed , +.06 , 2.95 , +.10 , 3.29
 2018.05.09 , Wed , +.04 , 2.89 ,      , 3.19 
