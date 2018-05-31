@@ -5,7 +5,14 @@ published: true
 ---
 <html>
 	<head>
-		<link rel="stylesheet" href="tipuesearch/css/tipuesearch.css">
+		{% if page.tipue_search_active or layout.tipue_search_active %}
+			<link rel="stylesheet" href="{{ "/tipuesearch/css/normalize.css" | relative_url }}">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="{{ "/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+			<link rel="stylesheet" href="{{ "/tipuesearch/css/tipuesearch.css" | relative_url }}">
+			<script src="{{ "/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+			<script src="{{ "/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+		{% endif %}
 	</head>
 	<body>
 		<form action="search.html">
