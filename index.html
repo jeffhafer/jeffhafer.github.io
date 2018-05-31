@@ -3,11 +3,22 @@ layout: default
 title: The Archive
 published: true
 ---
-
-<div id="home">
-	<ul class="posts">
-		{% for post in site.posts %}
-	    		<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
-	    	{% endfor %}
-	</ul>
-</div>
+<html>
+	<head>
+		<link rel="stylesheet" href="tipuesearch/css/tipuesearch.css">
+	</head>
+	<body>
+		<form action="search.html">
+			<div class="tipue_search_left"><img src="tipuesearch/search.png" class="tipue_search_icon"></div>
+			<div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
+			<div style="clear: both;"></div>
+		</form>
+		<div id="home">
+			<ul class="posts">
+				{% for post in site.posts %}
+					<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>
