@@ -81,18 +81,15 @@
 			</div>
 
 			<div id='menu' class='grid-menu'>
-				<div align=center>
-				    {% assign categories = site.categories | sort %}
-				    {% for category in categories %}
+				{% assign categories = site.categories | sort %}
+				{% for category in categories %}
 					<div class="category">
-					    <a href="{{ baseurl }}/{{ category | first | slugify }}">
-						    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
-					    </a>
+						<a href="{{ baseurl }}/{{ category | first | slugify }}">
+							{{ category[0] | replace:'-', ' ' }}&nbsp;({{ category | last | size }})
+					 	</a>
 					</div>
-				    {% endfor %}
-				</div>
+				{% endfor %}
 			</div>
-			
 		</div>
 	</body>
 	<script>
