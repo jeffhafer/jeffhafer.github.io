@@ -24,13 +24,21 @@
 
 				}
 			.category{
-				font-size: 1em;
+				font-size: 0.5em;
 				font-weight: bolder;
 				}
 			
 			.grid-header { grid-area: header; }
-			.grid-menu   { grid-area: menu; }
-			.grid-main   { grid-area: main; }
+			.grid-menu   {
+				font-size: 0.5em;
+				font-weight: bolder;
+				grid-area: menu;
+				justify-self: start;
+				}
+			.grid-main   {
+				grid-area: main;
+				justify-self: start;
+				}
 			.grid-footer { grid-area: footer; }
 
 			.grid-container {
@@ -80,7 +88,7 @@
 					    <a href="{{ baseurl }}/{{ category | first | slugify }}">
 						    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
 					    </a>
-					</div>;
+					</div>
 				    {% endfor %}
 				</div>
 			</div>
