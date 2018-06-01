@@ -19,6 +19,11 @@
 
 		<title>The Archive</title>
 		<style>
+			.category{
+				font-size: 1em;
+				font-weight: bolder;
+				}
+			
 			.grid-header { grid-area: header; }
 			.grid-menu   { grid-area: menu; }
 			.grid-main   { grid-area: main; }
@@ -67,11 +72,11 @@
 				<div align=center>
 				    {% assign categories = site.categories | sort %}
 				    {% for category in categories %}
-					<span class="site-tag">
+					<div class="category">
 					    <a href="{{ baseurl }}/{{ category | first | slugify }}">
 						    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
 					    </a>
-					</span>&nbsp;
+					</div>;
 				    {% endfor %}
 				</div>
 			</div>
