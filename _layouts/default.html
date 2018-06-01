@@ -18,10 +18,43 @@
 		<script src="{{ "/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
 
 		<title>The Archive</title>
+		<style>
+			.grid-header { grid-area: header; }
+			.grid-menu   { grid-area: menu; }
+			.grid-main   { grid-area: main; }
+			.grid-footer { grid-area: footer; }
+
+			.grid-container {
+			  display: grid;
+			  grid-template-areas:
+			    'menu header header header header header'
+			    'menu main main main main main'
+			    'menu footer footer footer footer footer';
+			  grid-gap: 10px;
+			  background-color: #2196F3;
+			  padding: 10px;
+			}
+			.grid-container > div {
+			  background-color: rgba(255, 255, 255, 0.8);
+			  text-align: center;
+			  padding: 20px 0;
+			  font-size: 30px;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="wrap" align=center>
-			<div id="header" align=center>
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
+		
+		
+		
+		<div id="wrap" class='grid-container'>
+			<div id="header" class='grid-header'>
 				<span style='float:left;font-size:2em;font-weight:bolder;'><a href="/">Notes</a></span>
 				<span style='float:right;'>
 					<form action="{{ page.url | relative_url }}">
@@ -32,11 +65,15 @@
 				</span>
 			</div>
 
-			<div id="content" align=center>  
+			<div id="content" class='grid-main'>  
 			  {{ content }}
 			</div>
 
-			<div id="footer" align=center>
+			<div id="footer" class='grid-footer'>
+				<hr>
+			</div>
+
+			<div id='menu' class='grid-menu'>
 				<div align=center>
 				    {% assign categories = site.categories | sort %}
 				    {% for category in categories %}
@@ -48,6 +85,7 @@
 				    {% endfor %}
 				</div>
 			</div>
+			
 		</div>
 	</body>
 	<script>
