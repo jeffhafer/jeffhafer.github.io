@@ -21,7 +21,7 @@
 		<style>
 			body{
 				background-color: black;
-
+				color: white;
 				}
 			.category{
 				font-size: 0.5em;
@@ -41,29 +41,36 @@
 				justify-self: start;
 				}
 			.grid-footer { grid-area: footer; }
+			.grid-search{
+				grid-area: search;
 
 			.grid-container {
-			  display: grid;
-			  grid-template-areas:
-			    'menu header header header header header'
-			    'menu main main main main main'
-			    'menu footer footer footer footer footer';
-			  grid-gap: 10px;
-			  /*background-color: #2196F3;*/
-			  padding: 10px;
-			}
+			  	display: grid;
+			  	grid-template-areas:
+			    		'menu header header header header header'
+			    		'menu main main main main main'
+					'search search search search search search'
+			    		'menu footer footer footer footer footer';
+			  	grid-gap: 10px;
+			  	padding: 10px;
+				}
 			.grid-container > div {
-			  /* background-color: rgba(255, 255, 255, 0.8); */
-			  text-align: center;
-			  padding: 20px 0;
-			  font-size: 30px;
-			}
+			  	text-align: center;
+			  	padding: 20px 0;
+			  	font-size: 30px;
+				}
+			.title{
+				float:left;
+				font-size:1em;
+				font-weight:bolder;
+				}
 		</style>
 	</head>
 	<body>
 		<div id="wrap" class='grid-container'>
-			<div id="header" class='grid-header'>
-				<span style='float:left;font-size:2em;font-weight:bolder;'><a href="/">Notes</a></span>
+			<div id="header" class='grid-header'></div>
+			<div id="search" class='grid-search'>
+				<span class='title'><a href="/">Notes</a></span>
 				<span style='float:right;'>
 					<form action="{{ page.url | relative_url }}">
 					<div class="tipue_search_left"><img src="{{ "/tipuesearch/search.png" | relative_url }}" class="tipue_search_icon"></div>
@@ -71,7 +78,7 @@
 					<div style="clear: both;"></div>
 					</form>
 				</span>
-			</div>
+			</div
 
 			<div id="content" class='grid-main'>  
 			  {{ content }}
