@@ -1,59 +1,58 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"  />
-<meta name="description" content="Jeff Hafer Blog" />
-<meta name="keywords" content="application,code,software,development" />
-<meta name="author" content="Jeff Hafer" />
-<link rel="stylesheet" type="text/css" href="/css/default.css" />
-<link rel="stylesheet" type="text/css" href="/css/pretty_code.css" />
-<link rel="alternate" type="application/atom+xml" href="http://jeffhafer.github.io/atom.xml" />
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"  />
+		<meta name="description" content="Jeff Hafer Blog" />
+		<meta name="keywords" content="application,code,software,development" />
+		<meta name="author" content="Jeff Hafer" />
+		<link rel="stylesheet" type="text/css" href="/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="/css/pretty_code.css" />
+		<link rel="alternate" type="application/atom+xml" href="http://jeffhafer.github.io/atom.xml" />
 
-<!-- Links for tipuesearch -->
-<link rel="stylesheet" href="{{ "/tipuesearch/css/normalize.css" | relative_url }}">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="{{ "/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
-<link rel="stylesheet" href="{{ "/tipuesearch/css/tipuesearch.css" | relative_url }}">
-<script src="{{ "/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
-<script src="{{ "/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+		<!-- Links for tipuesearch -->
+		<link rel="stylesheet" href="{{ "/tipuesearch/css/normalize.css" | relative_url }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="{{ "/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+		<link rel="stylesheet" href="{{ "/tipuesearch/css/tipuesearch.css" | relative_url }}">
+		<script src="{{ "/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+		<script src="{{ "/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
 
-<title>The Archive</title>
-</head>
+		<title>The Archive</title>
+	</head>
+	<body>
+		<div id="wrap" align=center>
+			<div id="header" align=center>
+				<span style='float:left;font-size:2em;font-weight:bolder;width:200px;'><a href="/">Notes</a></span>
+				<span style='float:right;'>
+					<form action="{{ page.url | relative_url }}">
+					<div class="tipue_search_left"><img src="{{ "/tipuesearch/search.png" | relative_url }}" class="tipue_search_icon"></div>
+					<div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
+					<div style="clear: both;"></div>
+					</form>
+				</span>
+			</div>
 
-<body>
-	<div id="wrap" align=center>
-		<div id="header" align=center>
-			<span style='float:center;font-size:2em;font-weight:bolder;width:200px;'><a href="/">Notes</a></span>
-			<span style='float:right;'>
-				<form action="{{ page.url | relative_url }}">
-				<div class="tipue_search_left"><img src="{{ "/tipuesearch/search.png" | relative_url }}" class="tipue_search_icon"></div>
-				<div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
-				<div style="clear: both;"></div>
-				</form>
-			</span>
-		</div>
-	
-		<div id="content" align=center>  
-		  {{ content }}
-		</div>
+			<div id="content" align=center>  
+			  {{ content }}
+			</div>
 
-		<div id="footer" align=center>
-			<div align=center>
-			    {% assign categories = site.categories | sort %}
-			    {% for category in categories %}
-				<span class="site-tag">
-				    <a href="{{ baseurl }}/{{ category | first | slugify }}">
-					    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
-				    </a>
-				</span>&nbsp;
-			    {% endfor %}
+			<div id="footer" align=center>
+				<div align=center>
+				    {% assign categories = site.categories | sort %}
+				    {% for category in categories %}
+					<span class="site-tag">
+					    <a href="{{ baseurl }}/{{ category | first | slugify }}">
+						    {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
+					    </a>
+					</span>&nbsp;
+				    {% endfor %}
+				</div>
 			</div>
 		</div>
-	</div>
-</body>
-<script>
-	$(document).ready(function() {
-		$('#tipue_search_input').tipuesearch();
-	});
-</script>
+	</body>
+	<script>
+		$(document).ready(function() {
+			$('#tipue_search_input').tipuesearch();
+		});
+	</script>
 </html>
