@@ -20,27 +20,29 @@
 		<title>The Archive</title>
 		<style>
 			body{
-				background-color: black;
-				color: white;
+				background-color: white;
+				color: black;
 				}
 			.category{
 				font-size: 15px;
 				font-weight: bolder;
 				text-align: left;
 				}
-			
+
+			.grid-footer { grid-area: footer; }
 			.grid-header { grid-area: header; }
+			.grid-logo { grid-area: logo; }
+			.grid-main{
+				grid-area: main;
+				justify-self: start;
+				}
 			.grid-menu   {
 				font-size: 0.5em;
 				font-weight: bolder;
 				grid-area: menu;
 				justify-self: start;
 				}
-			.grid-main{
-				grid-area: main;
-				justify-self: start;
-				}
-			.grid-footer { grid-area: footer; }
+
 			.grid-page-title {
 				grid-area: pgTitle;
 				}
@@ -52,7 +54,7 @@
 			.grid-container {
 			  	display: grid;
 			  	grid-template-areas:
-			    		'nada header header header header header'
+			    		'logo header header header header header'
 					'menu search search search search search'
 					'menu pgTitle pgTitle pgTitle pgTitle pgTitle'
 			    		'menu main main main main main'
