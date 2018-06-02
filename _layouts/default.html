@@ -36,7 +36,7 @@
 				grid-area: menu;
 				justify-self: start;
 				}
-			.grid-main   {
+			.grid-main{
 				grid-area: main;
 				justify-self: start;
 				}
@@ -44,6 +44,8 @@
 			.grid-search{
 				grid-area: search;
 				}
+			
+			
 			.grid-container {
 			  	display: grid;
 			  	grid-template-areas:
@@ -55,7 +57,6 @@
 			  	padding: 10px;
 				}
 			.grid-container > div {
-			  	text-align: center;
 			  	padding: 20px 0;
 			  	font-size: 30px;
 				}
@@ -69,7 +70,7 @@
 	<body>
 		<div id="wrap" class='grid-container'>
 			<div id="header" class='grid-header'></div>
-			<div id="search" class='grid-search'>
+			<div class='grid-search'>
 				<span class='title'><a href="/">Notes</a></span>
 				<span style='float:right;'>
 					<form action="{{ page.url | relative_url }}">
