@@ -11,7 +11,7 @@ published: true
 		<div class='grid-search'>
 			<div id="tipue_search_content"></div>
 		</div>
-		<div id="home">
+		<div id="home" class='grid-main'>
 			<ul class="posts">
 				{% for post in site.posts %}
 					<li>&laquo; <span>{{ post.date | date_to_string }}</span>&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
