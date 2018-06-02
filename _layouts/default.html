@@ -41,6 +41,9 @@
 				justify-self: start;
 				}
 			.grid-footer { grid-area: footer; }
+			.grid-page-title {
+				grid-area: pgTitle;
+				}
 			.grid-search{
 				grid-area: search;
 				}
@@ -51,6 +54,7 @@
 			  	grid-template-areas:
 			    		'nada header header header header header'
 					'menu search search search search search'
+					'menu pgTitle pgTitle pgTitle pgTitle pgTitle'
 			    		'menu main main main main main'
 			    		'menu footer footer footer footer footer';
 			  	grid-gap: 10px;
