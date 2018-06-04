@@ -33,7 +33,6 @@
 			.grid-header { grid-area: header; }
 			.grid-logo { 
 				grid-area: logo;
-				justify-self: center;
 				width: 70px;
 				}
 			.grid-logo img{
@@ -96,7 +95,11 @@
 				</span>
 			</div>
 				
-			<div class='grid-logo'><img src='/images/cm_logo.png'></div>
+			<div class='grid-logo'>
+				<center>
+					<img src='/images/cm_logo.png'>
+				</center>
+			</div>
 
 			<!-- Bring in content from index.html-->			
 			{{ content }}
