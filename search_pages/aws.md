@@ -4,6 +4,7 @@ title: AWS Search
 permalink: /aws/
 published: true
 ---
+<div id='page_title'>AWS</div>
 <div id="home">
     <ul class="posts">
         {% assign sorted_posts = site.posts | sort: "title" %}
