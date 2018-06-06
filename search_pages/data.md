@@ -4,7 +4,7 @@ title: Data Search
 permalink: /data/
 published: true
 ---
-<div id='page_title'>Data</div>
+<div id='category_page_title'>Data</div>
 <div id="home">
     <ul class="posts">
         {% assign sorted_posts = site.posts | sort: "title" %}
