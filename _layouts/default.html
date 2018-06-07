@@ -127,6 +127,10 @@
 		$(document).ready(function() {
 			$('#tipue_search_input').tipuesearch();
 			var page_title = $("#page_title").html()
+			var title = window.location.search.split("?q=")[1];
+			if (title){
+				document.title = 'Archive - ' + title;
+			}
 			//console.log("page_title: " + page_title);
 			//if (page_title){ $("#div_header_title").html(page_title); }
 			//$("#page_title").remove();
