@@ -115,11 +115,11 @@
 				{% assign categories = site.categories | sort %}
 				{% for category in categories %}
 					<div class="category">
-						<a href="{{ baseurl }}/{{ category | first | slugify }}">
+						<!--<a href="{{ baseurl }}/{{ category | first | slugify }}">-->
 						<script>
-							console.log(window.location.search.split('?q=')[1]);
+							var searchStr = window.location.search.split('?q=')[1];
+							document.write('<a href = "{{ baseurl }}/q=' + searchStr + '">');
 						</script>
-							<a href="{{ baseurl }}/?q=
 							{{ category[0] | replace:'-', ' ' }}&nbsp;({{ category | last | size }})
 					 	</a>
 					</div>
