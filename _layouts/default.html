@@ -88,7 +88,7 @@
 	<body>
 		<div id="wrap" class='grid-container'>
 			<div id="header" class='grid-header'>
-				<span class='title'><div id='div_header_title'>Home</div></span>
+				<span class='title'><div id='div_header_title'>The Archive</div></span>
 				<span style='float:right;'>
 					<form action="/"> <!--{{--> <!--page.url | relative_url }}"-->
 						<div class="tipue_search_left"><img src="{{ "/tipuesearch/search.png" | relative_url }}" class="tipue_search_icon"></div>
@@ -130,6 +130,7 @@
 			var title = window.location.search.split("?q=")[1];
 			if (title){
 				document.title = 'Archive - ' + title;
+				$("#div_header_title").html(title);
 			}
 			//console.log("page_title: " + page_title);
 			//if (page_title){ $("#div_header_title").html(page_title); }
