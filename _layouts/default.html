@@ -117,7 +117,7 @@
 					<div class="category">
 						<!--<a href="{{ baseurl }}/{{ category | first | slugify }}">-->
 						<script>
-							document.write('<a href = "{{ baseurl }}/q={{ category }}">');
+							document.write("<a href='{{ baseurl }}/q={{ category }}'>");
 						</script>
 							{{ category[0] | replace:'-', ' ' }}&nbsp;({{ category | last | size }})
 					 	</a>
