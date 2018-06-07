@@ -115,7 +115,7 @@
 				{% assign categories = site.categories | sort %}
 				{% for category in categories %}
 					<div class="category">
-						<a href="{{ baseurl }}/{{ category | first | slugify }}">
+						<a href="{{ baseurl }}/?q={{ category | first | slugify }}">
 						<script>
 							var line = "<a href='{{ baseurl }}/q={{ category }}'>";
 							console.log(line);
