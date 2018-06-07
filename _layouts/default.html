@@ -116,11 +116,6 @@
 				{% for category in categories %}
 					<div class="category">
 						<a href="{{ baseurl }}/?q={{ category | first | slugify }}">
-						<script>
-							var line = "<a href='{{ baseurl }}/q={{ category }}'>";
-							console.log(line);
-							//document.write("<a href='{{ baseurl }}/q={{ category }}'>");
-						</script>
 							{{ category[0] | replace:'-', ' ' }}&nbsp;({{ category | last | size }})
 					 	</a>
 					</div>
