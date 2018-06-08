@@ -1,13 +1,91 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-    {% include head.html %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="description" content="{{ site.description }}">
+
+        <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+        <style>
+            /* ============== Grid Template and areas ============== */
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'logo header header header header header'
+                    'menu search search search search search'
+                    'menu pgTitle pgTitle pgTitle pgTitle pgTitle'
+                    'menu main main main main main'
+                    'menu footer footer footer footer footer';
+                grid-template-columns: 70px auto auto auto auto auto;
+                grid-gap: 10px;
+                padding: 10px;
+                }
+            .grid-container > div {
+                padding: 5px 0;
+                font-size: 15px;
+                }
+            .grid-footer { grid-area: footer; }
+            .grid-header { grid-area: header; }
+            .grid-logo { 
+                grid-area: logo;
+                width: 70px;
+                }
+            .grid-logo img{
+                width: 35px;
+                }
+            .grid-main{
+                grid-area: main;
+                }
+            .grid-menu   {
+                font-size: 0.5em;
+                font-weight: bolder;
+                grid-area: menu;
+                width: 70px;
+                }
+
+            .grid-page-title {
+                grid-area: pgTitle;
+                }
+            .grid-search{
+                grid-area: search;
+                }
+            /* ===================================================== */
+
+
+
+            #search-demo-container {
+                max-width: 40em;
+                padding: 1em;
+                margin: 1em auto;
+                border: 1px solid lightgrey;
+                }
+            #search-input {
+                display: inline-block;
+                padding: .5em;
+                width: 100%;
+                font-size: 0.8em;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                }
+        </style>
+    </head>
 
     <body>
         <div id="wrap" class='grid-container'>
+            
+            <div class='grid-logo'>
+				<a href='https://jeffhafer.github.io/'><img src='/images/cm_logo.png'></a>
+            </div>
     
             {% include header.html %}
 
-            <div id="search-demo-container">
+            <div id="search-demo-container" class='grid_search'>
                 <input type="text" id="search-input" placeholder="search...">
                 <ul id="results-container"></ul>
             </div>
