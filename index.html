@@ -1,40 +1,23 @@
-<!doctype html>
-<html lang="en">
+---
+layout: default
+---
 
-  {% include head.html %}
+<div class="home">
 
-  <body>
+  <h1 class="page-heading">Posts</h1>
 
-    {% include header.html %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <div id="search-demo-container">
-      <input type="text" id="search-input" placeholder="search...">
-      <ul id="results-container"></ul>
-    </div>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    {% include footer.html %}
-
-    <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
-
-    <script>
-      window.simpleJekyllSearch = new SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: false,
-        exclude: ['Welcome']
-      })
-    </script>
-
-  </body>
-
-</html>
+</div>
