@@ -4,7 +4,7 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <div class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></div>
+    <div class="post-title"><a href="{{ site.github.repository_url }}/blob/master/{{ page.relative_path }}">{{ page.title }}</a></div>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
