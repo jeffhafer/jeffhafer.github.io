@@ -98,11 +98,13 @@
                 width: 100%;
                 }
 			#results-container{
-				float:left;
-				margin: 5px;
 				margin-block-start: 0px;
 				margin-block-end: 0px;
 				padding-inline-start: 40px;
+				}
+			#results-container div{
+				float:left;
+				margin: 5px;
 				}
         </style>
     </head>
@@ -140,7 +142,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<div class="filename">{title}</div>',
+        searchResultTemplate: '<a href="{url}" title="{desc}">{title}</a>',
         noResultsText: 'No results found',
         limit: 10,
         fuzzy: false,
