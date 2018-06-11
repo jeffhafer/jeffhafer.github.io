@@ -55,10 +55,6 @@ End Class
 </html>
 ```
 
-## Important
-
-You can see that it is very simple to callback .Net with multiple parameters.
-
 ## Gettting started:
 
 1. Create a new project
@@ -76,8 +72,3 @@ You can see that it is very simple to callback .Net with multiple parameters.
   * Close IE. Return to project. Right-click on project and choose Add - New Item. Choose Add-in Express Items - Internet Explorer - ADX IE Bar Right-Click MyIEBar1.vb and choose View Designer Blah, blah, blah - No reason to get too detaild here. This is much like above
 7. Add some events to the add-in
   * Close IE if open Right-Click on IEModule.vb and choose Properties Choose “IEModule AddInExpress.IE.ADXIEModule” in Properties dropdown Click on the events lightning bolt. Double-click on BeforeNavigate2 to create event Add some code: ”
-
-## Tabs
-* A new IE tab is created when you navigate to a web page or a blank page.
-* Internet ExplorerProgramming
-
