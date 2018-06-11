@@ -10,31 +10,33 @@ Example: Calling .Net from Javascript
 
     When setting up an add-in that allows javascript calls to communicate with .Net application, it is important to note that the .Net event for handling the comm should be Initialize(), not IEModule_DocumentComplete. The IEModule_DocumentComplete works to some extent, but an F5 refresh of the browser causes it to fail. Initialize works always. Here is an example showing the necessary .Net code and HTML routines. The .Net code contains a class, MyWinApiWindow, that may or may not be necessary for the application you are running. It allows you to pop-up a messagebox ALWAYS in front of the browser. Sometimes VERY important, sometimes not at all.
 
-Public Sub Initialize() Handles MyBase.DownloadComplete
-    Try
-        Dim scriptEngine As Object = Me.HTMLDocument.Script
-        scriptEngine.GetType().InvokeMember("myAddon", BindingFlags.SetProperty, Nothing, scriptEngine, New Object() {Me})
-    Catch ex As Exception
-    End Try
-End Sub
+<code>
+	Public Sub Initialize() Handles MyBase.DownloadComplete
+		Try
+		Dim scriptEngine As Object = Me.HTMLDocument.Script
+		scriptEngine.GetType().InvokeMember("myAddon", BindingFlags.SetProperty, Nothing, scriptEngine, New Object() {Me})
+		Catch ex As Exception
+		End Try
+	End Sub
 
-Public Sub MyMethod(ByVal param1 As String, ByVal param2 As String)
-      MessageBox.Show(New MyWinApiWindow(Me.ParentHandle), param1 & " " & param2)
-End Sub
+	Public Sub MyMethod(ByVal param1 As String, ByVal param2 As String)
+		  MessageBox.Show(New MyWinApiWindow(Me.ParentHandle), param1 & " " & param2)
+	End Sub
 
-Public Class MyWinApiWindow
-      Implements System.Windows.Forms.IWin32Window
-      Dim theHandle As IntPtr
-      Public Sub New(ByVal aHandle As System.IntPtr)
-          theHandle = aHandle
-      End Sub
-      Public ReadOnly Property Handle() As System.IntPtr _
-          Implements System.Windows.Forms.IWin32Window.Handle
-          Get
-              Return theHandle
-          End Get
-      End Property
-End Class
+	Public Class MyWinApiWindow
+		  Implements System.Windows.Forms.IWin32Window
+		  Dim theHandle As IntPtr
+		  Public Sub New(ByVal aHandle As System.IntPtr)
+		  theHandle = aHandle
+		  End Sub
+		  Public ReadOnly Property Handle() As System.IntPtr _
+		  Implements System.Windows.Forms.IWin32Window.Handle
+		  Get
+			  Return theHandle
+		  End Get
+		  End Property
+	End Class
+</code>
 
 <html>
     <head>
