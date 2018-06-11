@@ -3,8 +3,6 @@ layout: post
 title: Add-In Express Cheatsheet
 published: true
 ---
-# Add-In Express Cheatsheet
-
 ## Example: Calling .Net from Javascript
 
 When setting up an add-in that allows javascript calls to communicate with .Net application, it is important to note that the .Net event for handling the comm should be Initialize(), not IEModule_DocumentComplete. The IEModule_DocumentComplete works to some extent, but an F5 refresh of the browser causes it to fail. Initialize works always. Here is an example showing the necessary .Net code and HTML routines. The .Net code contains a class, MyWinApiWindow, that may or may not be necessary for the application you are running. It allows you to pop-up a messagebox ALWAYS in front of the browser. Sometimes VERY important, sometimes not at all.
