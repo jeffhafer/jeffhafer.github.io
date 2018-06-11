@@ -12,6 +12,23 @@
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
         <style>
+			.filename {
+				border: 1px solid #AAAAAA;
+				border-radius: 5px;
+				box-shadow: 5px 5px 5px #CCCCCC;
+				font-size: 1em;
+				font-weight: bold;
+				padding: 3px 5px 2px 5px;
+				text-align: center;
+			}
+			.filename:hover {
+				background-color: yellow;
+				border: 1px solid #AAAAAA;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		
+		
             /* ============== Grid Template and areas ============== */
             .grid-container {
                 display: grid;
@@ -81,6 +98,8 @@
                 width: 100%;
                 }
 			#results-container{
+				float:left;
+				margin: 5px;
 				margin-block-start: 0px;
 				margin-block-end: 0px;
 				padding-inline-start: 40px;
@@ -97,7 +116,8 @@
     
             <div id="search-demo-container" class='grid-search'>
                 <input type="text" id="search-input" placeholder="search...">
-                <ul id="results-container"></ul>
+                <div id="results-container"></div>
+				<hr style="clear:both;visibility:hidden;">
             </div>
 
             <div class="page-content grid-main">
@@ -118,7 +138,7 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        searchResultTemplate: '<div class='filename'><a href="{url}" title="{desc}">{title}</a></div>',
         noResultsText: 'No results found',
         limit: 10,
         fuzzy: false,
