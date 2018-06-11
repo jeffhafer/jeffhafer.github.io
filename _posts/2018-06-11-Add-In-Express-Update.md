@@ -10,7 +10,7 @@ Example: Calling .Net from Javascript
 
     When setting up an add-in that allows javascript calls to communicate with .Net application, it is important to note that the .Net event for handling the comm should be Initialize(), not IEModule_DocumentComplete. The IEModule_DocumentComplete works to some extent, but an F5 refresh of the browser causes it to fail. Initialize works always. Here is an example showing the necessary .Net code and HTML routines. The .Net code contains a class, MyWinApiWindow, that may or may not be necessary for the application you are running. It allows you to pop-up a messagebox ALWAYS in front of the browser. Sometimes VERY important, sometimes not at all.
 
-<code>
+```VB.Net
 	Public Sub Initialize() Handles MyBase.DownloadComplete
 		Try
 		Dim scriptEngine As Object = Me.HTMLDocument.Script
@@ -36,8 +36,9 @@ Example: Calling .Net from Javascript
 		  End Get
 		  End Property
 	End Class
-</code>
+```
 
+```HTML
 <html>
     <head>
   <script type="text/javascript"> 
@@ -55,6 +56,7 @@ Example: Calling .Net from Javascript
   <button id='btn_launch' name='btn_launch' type='button' onClick='MyFunction();'>Launch Button</button>
     </body>
 </html>
+```
 
 Important
 
