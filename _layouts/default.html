@@ -12,171 +12,169 @@
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
         <style>
-			article pre{
-				border: 1px solid #808080;
-				border-radius: 3px;
-				box-shadow: -5px 5px 5px #CCCCCC;
-				margin-left: 30px;
-				padding: 3px;
-				white-space: pre-wrap;
-				}
-			body{
-				font-family: Arial, Sans-Serif;
-				}
-			.filename {
-				border: 1px solid #AAAAAA;
-				border-radius: 5px;
-				box-shadow: 5px 5px 5px #CCCCCC;
-				font-size: 1em;
-				font-weight: bold;
-				padding: 3px 5px 2px 5px;
-				text-align: center;
+		article pre{
+			border: 1px solid #808080;
+			border-radius: 3px;
+			box-shadow: -5px 5px 5px #CCCCCC;
+			margin-left: 30px;
+			padding: 3px;
+			white-space: pre-wrap;
 			}
-			.filename:hover {
-				background-color: yellow;
-				border: 1px solid #AAAAAA;
-				border-radius: 5px;
-				cursor: pointer;
+		body{
+			font-family: Arial, Sans-Serif;
 			}
-			.filename a{
-				color: black;
-				font-size: 14px;
-				font-weight: bold;
-				text-decoration: none;
-				}
-			.filename a:visited{
-				color: black;
-				}
-		
-            /* ============== Grid Template and areas ============== */
-            .grid-container {
-                display: grid;
-                grid-template-areas:
-                    /*'logo header header header header header'*/
-                    'logo search search search search search'
-					'sres sres sres sres sres sres'
-                    'main main main main main main'
-                    'footer footer footer footer footer footer';
-                grid-template-columns: 70px auto auto auto auto auto;
-                grid-gap: 10px;
-                padding: 10px;
-                }
-            .grid-container > div {
-                /*padding: 5px 0;*/
-                /*font-size: 15px;*/
-                }
-            .grid-footer { grid-area: footer; }
-            .grid-header { grid-area: header; }
-            .grid-logo { 
-                grid-area: logo;
-                width: 70px;
-                }
-            .grid-logo img{
-                width: 20px;
-                }
-            .grid-main{
-                grid-area: main;
-                }
-            .grid-menu   {
-                font-size: 0.5em;
-                font-weight: bolder;
-                grid-area: menu;
-                width: 70px;
-                }
+		.filename {
+			border: 1px solid #AAAAAA;
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px #CCCCCC;
+			font-size: 1em;
+			font-weight: bold;
+			padding: 3px 5px 2px 5px;
+			text-align: center;
+		}
+		.filename:hover {
+			background-color: yellow;
+			border: 1px solid #AAAAAA;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.filename a{
+			color: black;
+			font-size: 14px;
+			font-weight: bold;
+			text-decoration: none;
+			}
+		.filename a:visited{
+			color: black;
+			}
 
-            .grid-page-title {
-                grid-area: pgTitle;
-                }
-            .grid-search{
-                grid-area: search;
-                }
-			.grid-sres{
-				grid-area: sres;
-				}
-            /* ===================================================== */
+            	/* ============== Grid Template and areas ============== */
+		.grid-container {
+                	display: grid;
+                	grid-template-areas:
+                    		/*'logo header header header header header'*/
+                    		'logo search search search search search'
+				'sres sres sres sres sres sres'
+                    		'main main main main main main'
+                    		'footer footer footer footer footer footer';
+                	grid-template-columns: 70px auto auto auto auto auto;
+                	grid-gap: 10px;
+                	padding: 10px;
+                	}
+            	.grid-container > div {
+	                /*padding: 5px 0;*/
+        	        /*font-size: 15px;*/
+                														}
+            	.grid-footer { grid-area: footer; }
+            	.grid-header { grid-area: header; }
+            	.grid-logo { 
+                	grid-area: logo;
+                	width: 70px;
+                	}
+            	.grid-logo img{
+                	width: 20px;
+                	}
+            	.grid-main{
+                	grid-area: main;
+                	}
+            	.grid-menu{
+                	font-size: 0.5em;
+                	font-weight: bolder;
+                	grid-area: menu;
+                	width: 70px;
+                	}
+            	.grid-page-title {
+                	grid-area: pgTitle;
+                	}
+            	.grid-search{
+                	grid-area: search;
+                	}
+		.grid-sres{
+			grid-area: sres;
+		}
+            	/* ===================================================== */
 
-			.page-heading{
-				font-size: 20px;
-				font-weight: bold;
-				}
-			.post-list{
-				margin-block-start: 0px;
-				margin-block-end: 0px;
-				}
-			.post-title a{
-				text-decoration: none;
-				}
-            #search-demo-container {
-                /*max-width: 40em;*/
-                /*padding: 1em;*/
-                /*margin: 1em auto;*/
-                /*border: 1px solid lightgrey;*/
-                }
-            #search-input {
-				border: 1px solid lightgrey;
-				border-radius: 5px;
-				/*box-sizing: border-box;
-					-webkit-box-sizing: border-box;
+		.page-heading{
+			font-size: 20px;
+			font-weight: bold;
+			}
+		.post-list{
+			margin-block-start: 0px;
+			margin-block-end: 0px;
+			}
+		.post-title a{
+			text-decoration: none;
+			}
+            	#search-demo-container {
+                	/*max-width: 40em;*/
+                	/*padding: 1em;*/
+                	/*margin: 1em auto;*/
+                	/*border: 1px solid lightgrey;*/
+                	}
+            	#search-input {
+			border: 1px solid lightgrey;
+			border-radius: 5px;
+			/*box-sizing: border-box;
+			-webkit-box-sizing: border-box;
                 	-moz-box-sizing: border-box;*/
 		    	display: inline-block;
-				font-size: 15px;
-                /*padding: .5em;*/
-                width: 100%;
-                }
-			#results-container{
-				margin-block-start: 0px;
-				margin-block-end: 0px;
-				padding-inline-start: 0px;
-				}
-			#results-container div{
-				float:left;
-				margin: 5px;
-				text-decoration: none;
-				}
+			font-size: 15px;
+                	/*padding: .5em;*/
+                	width: 100%;
+                	}
+		#results-container{
+			margin-block-start: 0px;
+			margin-block-end: 0px;
+			padding-inline-start: 0px;
+			}
+		#results-container div{
+		float:left;
+			margin: 5px;
+		text-decoration: none;
+			}
         </style>
     </head>
 
-    <body>
-        <div id="wrap" class='grid-container'>
+	<body>
+        	<div id="wrap" class='grid-container'>
 	
-        	<div class='grid-logo'>
+			<div class='grid-logo'>
 				<a href='https://jeffhafer.github.io/'><img src='/images/cm_logo.png'></a>
-            </div>
-    
-            <div id="search-demo-container" class='grid-search'>
-                <input type="text" id="search-input" placeholder="search...">
+			</div>
+
+			<div id="search-demo-container" class='grid-search'>
+				<input type="text" id="search-input" placeholder="search...">
 				<hr style="clear:both;margin:0px;visibility:hidden;">
-            </div>
+			</div>
+
 			<div class='grid-sres'>
 				<div id="results-container"></div>				
 			</div>
 
-            <div class="page-content grid-main">
-		    <hr>
-                <div class="wrapper">
-                    {{ content }}
-                </div>
-            </div>
+			<div class="page-content grid-main">
+				<hr>
+				<div class="wrapper">
+					{{ content }}
+				</div>
+			</div>
 
-            <!--{ include footer.html }-->
+            	<!--{ include footer.html }-->
 
-        </div>
-    </body>
-    
-    <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+		</div>
+    	</body>
+																																																																																																																																																																																																		
+    	<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+	<script>
+      		window.simpleJekyllSearch = new SimpleJekyllSearch({
+        		searchInput: document.getElementById('search-input'),
+        		resultsContainer: document.getElementById('results-container'),
+        		json: '{{ site.baseurl }}/search.json',
+        		searchResultTemplate: '<div class="filename"><a href="{url}" title="{desc}">{title}</a></div>',
+        		noResultsText: 'No results found',
+        		fuzzy: false,
+        		exclude: ['Welcome']
+      		})
+    	</script>
 
-    <script>
-      window.simpleJekyllSearch = new SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search.json',
-        searchResultTemplate: '<div class="filename"><a href="{url}" title="{desc}">{title}</a></div>',
-        noResultsText: 'No results found',
-        fuzzy: false,
-        exclude: ['Welcome']
-      })
-    </script>
-
-  </body>
-
+  	</body>
 </html>
