@@ -1,3 +1,9 @@
+---
+layout: post
+title: Audio Files Cheatsheet
+published: true
+---
+
 Audio Files - Cheatsheet
 ========================
 
