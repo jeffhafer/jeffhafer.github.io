@@ -4,11 +4,6 @@ title: Audio Files Cheatsheet
 published: true
 ---
 
-Audio Files - Cheatsheet
-========================
-
-* * *
-
 *   How to split a .wav or .flac using a .cue file:
     *   Use Cue Splitter, a freeware, no-install file from here: [http://www.free-codecs.com/download/cue_splitter.htm](http://www.free-codecs.com/download/cue_splitter.htm)
 *   How to convert an audio file:
