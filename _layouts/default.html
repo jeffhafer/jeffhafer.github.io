@@ -40,7 +40,7 @@
 			}
 			.filename a{
 				color: black;
-				font-size: 15px;
+				font-size: 14px;
 				font-weight: bold;
 				text-decoration: none;
 				}
@@ -54,6 +54,7 @@
                 grid-template-areas:
                     /*'logo header header header header header'*/
                     'logo search search search search search'
+					'sres sres sres sres sres sres'
                     'main main main main main main'
                     'footer footer footer footer footer footer';
                 grid-template-columns: 70px auto auto auto auto auto;
@@ -89,6 +90,9 @@
             .grid-search{
                 grid-area: search;
                 }
+			.grid-sres{
+				grid-area: sres;
+				}
             /* ===================================================== */
 
 			.page-heading{
@@ -141,10 +145,11 @@
     
             <div id="search-demo-container" class='grid-search'>
                 <input type="text" id="search-input" placeholder="search...">
-                <div id="results-container"></div>
-				<p></p>
 				<hr style="clear:both;visibility:hidden;">
             </div>
+			<div class='grid-sres'>
+				<div id="results-container"></div>				
+			</div>
 
             <div class="page-content grid-main">
 		    <hr>
