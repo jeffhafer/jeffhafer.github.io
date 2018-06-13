@@ -9,14 +9,23 @@
    You can just as easily add a note in the test of the post. Search is really a full-text search.
    This is here only for reference. It is not recommended to use headers on this site...
 
-   ```javascript
-   ---
-   categories: ['MP3','OGG']
-   layout: post
-   title: Audio Files Cheatsheet
-   published: true
-   ---
-   ```
+```
+---
+categories: ['MP3','OGG']
+layout: post
+title: Audio Files Cheatsheet
+published: true
+---
+
+```
+   
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
    
 3. Converting HTML source to Markdown:
     * A basic Converter for pasted HTML:     [http://domchristie.github.io/turndown/](http://domchristie.github.io/turndown/)
