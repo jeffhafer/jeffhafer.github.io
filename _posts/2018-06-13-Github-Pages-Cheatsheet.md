@@ -33,6 +33,7 @@ function fancyAlert(arg) {
     <p>
    
 4. Markdown
-    * Default Markdown support: [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
+    * Github uses its own version of Markdown, but pretty much follows: [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
+    * 
     
     
