@@ -6,12 +6,12 @@
    <pre>
    Headers aren't necessary unless you want to specify some non-explicit categories!
    
-   ---
+   - --
    categories: ['Audio','Cheatsheet']
    layout: post
    title: Audio Files Cheatsheet
    published: true
-   ---
+   - --
    </pre>
 
 3. Converting HTML source to Markdown:
