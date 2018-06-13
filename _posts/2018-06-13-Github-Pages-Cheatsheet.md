@@ -18,7 +18,10 @@
    </pre>
 
 3. Converting HTML source to Markdown:
-    * [http://domchristie.github.io/turndown/](http://domchristie.github.io/turndown/)
+    * A basic Converter for pasted HTML:     [http://domchristie.github.io/turndown/](http://domchristie.github.io/turndown/)
+    * Turns a HTML from a URL into Markdown: [http://www.aaronsw.com/2002/html2text/](http://www.aaronsw.com/2002/html2text/)
     
-4. Markdown 
+4. Markdown
+    * Default Markdown support: [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
+    
     
