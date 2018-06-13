@@ -9,7 +9,7 @@
    You can just as easily add a note in the test of the post. Search is really a full-text search.
    This is here only for reference. It is not recommended to use headers on this site...
 
-   ```Text
+   ```javascript
    ---
    categories: ['MP3','OGG']
    layout: post
