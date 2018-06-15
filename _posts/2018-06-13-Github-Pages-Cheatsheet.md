@@ -33,13 +33,15 @@ function fancyAlert(arg) {
     <p>
    
 4. Markdown
-    * Github uses its own version of Markdown, but pretty much follows: [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
-    * 
-<hr>
-### Editing Examples
-<hr>
-#### Lists
+    * According to [THIS PAGE](https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/), Github ONLY Supports [KramDown](https://kramdown.gettalong.org/)!
+    
+    * However, the same page states that: "[Github-flavored Markdown](https://help.github.com/categories/writing-on-github/) is supported by KramDown. This pretty much follows: [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
 
+---
+### Editing Examples
+---
+
+#### Lists
 
 1. Item 1
 1. Item 2
