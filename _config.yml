@@ -2,11 +2,26 @@
 # This file contains configuration flags to customize your site
 #
 
-# Name of your site (displayed in the header)
-name: Jeff Hafer
+safe: false
+source: .
+
+name: Notes
+description: Helpful Notes
+
+highlighter: rouge
+markdown: kramdown
+
+plugins:
+  - jekyll-sitemap       # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed          # Create an Atom feed using the official Jekyll feed gem
+  - jemoji               # use emoji within any Jekyll page or post, just like you would in a comment or issue within a repository on GitHub.
+  - jekyll-redirect-from # automatically redirect visitors to the updated URL when a blog entry changes.
+ 
+
+############################# Below Here = Old Config #######################################
 
 # Short bio or description (displayed in the header)
-description: Web / Application Developer
+#description: Web / Application Developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -68,14 +83,14 @@ permalink: /:title/
 
 # The release of Jekyll Now that you're using
 # version: v1.2.0 #Original Version
-version: 3.7.3
+# version: 3.7.3
 
 # Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
+#kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
+  #syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
@@ -85,12 +100,12 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jemoji # use emoji within any Jekyll page or post, just like you would in a comment or issue within a repository on GitHub.
-  - jekyll-redirect-from # automatically redirect visitors to the updated URL when a blog entry changes.
-  # - jekyll-seo-tag # Add SEO metatag info to blog entries
+#gems:
+#  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+#  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+#  - jemoji # use emoji within any Jekyll page or post, just like you would in a comment or issue within a repository on GitHub.
+#  - jekyll-redirect-from # automatically redirect visitors to the updated URL when a blog entry changes.
+#  # - jekyll-seo-tag # Add SEO metatag info to blog entries
 
 # Exclude these files from your production _site
 exclude:
