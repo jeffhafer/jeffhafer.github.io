@@ -2,9 +2,6 @@
 # This file contains configuration flags to customize your site
 #
 
-safe: false
-source: .
-
 name: Notes
 description: Helpful Notes
 
