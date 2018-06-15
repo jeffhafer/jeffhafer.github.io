@@ -47,11 +47,11 @@ function fancyAlert(arg) {
 
 
 1. Item 1
-   A. Sub 1
-   B. Sub 2
+   1. Sub 1
+   1. Sub 2
 1. Item 2
-   A. Sub 1
-   B. Sub 2
+   1. Sub 1
+   1. Sub 2
        * Sub Sub 1
        * Sub Sub 2
 
