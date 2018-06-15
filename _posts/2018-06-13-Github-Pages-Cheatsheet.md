@@ -6,7 +6,7 @@
 2. [Optional] Header
    <p>
    Headers aren't necessary unless you want to specify some non-explicit categories!
-   You can just as easily add a note in the test of the post. Search is really a full-text search.
+   You can just as easily add a note in the text of the post. Search is really a full-text search.
    This is here only for reference. It is not recommended to use headers on this site...
 
 ```
