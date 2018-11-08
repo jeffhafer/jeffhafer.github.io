@@ -54,25 +54,7 @@ published: true
 		<br>
 		<div id='div_hourly'></div>
 		<p></p>
-		<div id='div_maps'>
-			<table border=0 cellpadding=0 cellspacing=1 width=100%>
-				<tbody>
-				<tr>
-					<td width=50%><img src='http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0' alt="map" /></td>
-					<td width=50%><img src='http://services.intellicast.com/200904-01/576347879/Image/Radar/Radar2009.13L/Loop/SectorName/usa' alt="map" /></td>
-				</tr><tr>
-					<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif' alt="map" /></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg' alt="map"/></center></td>
-				</tr><tr>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_30_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_90_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>
-				</tr><tr>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/acttemp_1280x720.jpg' alt="map"/></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/us_wxlo1_1280x720.jpg' alt="map"/></center></td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
+		<div id='div_maps'></div>
 		<div class='div_temp' id='t0'></div>
 		<div class='div_temp' id='t1'></div>
 		<div class='div_temp' id='t2'></div>
@@ -188,6 +170,24 @@ published: true
           		}
 			});
 		});
+		//Add the map table
+		var h = "";
+		h += "<table border=0 cellpadding=0 cellspacing=1 width=100%>";
+		h += "	  <tr>";
+		h += "		<td width=50%><img src='http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0' alt="map" /></td>";
+		h += "		<td width=50%><img src='http://services.intellicast.com/200904-01/576347879/Image/Radar/Radar2009.13L/Loop/SectorName/usa' alt="map" /></td>";
+		h += "</tr><tr>";
+		h += "		<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif' alt="map" /></center></td>";
+		h += "<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg' alt="map"/></center></td>";
+		h += "</tr><tr>";
+		h += "<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_30_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>";
+		h += "<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_90_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>";
+		h += "</tr><tr>";
+		h += "<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/acttemp_1280x720.jpg' alt="map"/></center></td>";
+		h += "<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/us_wxlo1_1280x720.jpg' alt="map"/></center></td>";
+		h += "</tr>";
+		h += "</table>";
+		$("div_maps").html(h);
 	</script>
 </html>
 <!--
