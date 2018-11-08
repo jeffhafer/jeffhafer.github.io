@@ -10,8 +10,6 @@ published: true
 		<title>Weather</title>
 		<link rel="icon" href="http://hafer.net/favicons/weather.ico" type="image/x-icon"> 
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-		<!--<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'></script>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/redmond/jquery-ui.css" type="text/css" media="all" />-->
 		<style>
 			.b{font-weight: bold;}
 			body{}
@@ -49,7 +47,6 @@ published: true
 			    text-align: center;
 				width: 9.09%;
 			}
-		
 		</style>
 	</head>
 	<body>
@@ -60,24 +57,12 @@ published: true
 		<div id='div_maps'>
 			<table border=0 cellpadding=0 cellspacing=1 width=100%>
 				<tr>
-					<!--<td><img src='http://radar.weather.gov/ridge/Conus/Loop/centgrtlakes_loop.gif'></td>-->
-					<!--<td><img src='http://ftpcontent.worldnow.com/wthr/webimages/WEB_REG_RAD_loop.gif'></td>-->
-					<!--<td><img src='http://content.foxtvmedia.com/wfld/weather/REGIONAL%20PRECIP_TYPE_RADAR.gif'></td>-->
-					<!--<td><img src='http://radar.weather.gov/ridge/Conus/Loop/NatLoop_Small.gif'></td>-->
-					<!--<td><img src='http://belo.bimedia.net/WFAA/weather/animated-loops/comp/640x480/usa_anim.gif'></td>-->
 					<td width=50%><img src='http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0'></td>
-					<!--<td width=50%><img src='http://icons.wunderground.com/data/640x480/2xradarb4_anim.gif'></td>-->
-					<!--<td width=50%><img src='https://www.wunderground.com/data/640x480/2xus_rd_anim.gif'></td>-->
-					<!--<td width=50%><img src='http://www.kentuckycities.net/wx/national_loop.gif?rnd=5668'></td>-->
 					<td width=50%><img src='http://services.intellicast.com/200904-01/576347879/Image/Radar/Radar2009.13L/Loop/SectorName/usa'></td>
 				</tr><tr>
-					<!--<td valign=top><center><img src='http://i.imwx.com/images/maps/tropical/map_spectrop06_ltst_6nh_enus_600x405.jpg' target='_blank'></center></td>-->
-					<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif'></canter></td>
+					<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif'></center></td>
 					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg'></center></td>
-					<!--<td valign=top width=50%><center><img src='http://data-services.wsi.com/200904-01/891672306/Image/Precipitation/Outlook30/SectorName/conus/Part/_30p'></center></td>-->
 				</tr><tr>
-					<!--<td valign=top><center><img src='http://i.imwx.com/images/maps/tropical/map_spectrop06_ltst_6nh_enus_600x405.jpg' target='_blank'></center></td>-->
-					<!--<td valign=top width=50%><center><img src='http://mrcc.isws.illinois.edu/cliwatch/GIS_plots/prcp_mpe/prcp_mpe_030_tot.png' height='415px'></center></td>-->
 					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_30_DAY_PRECIP_1280x720.jpg'></center></td>
 					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_90_DAY_PRECIP_1280x720.jpg'></center></td>
 				</tr><tr>
@@ -85,7 +70,6 @@ published: true
 					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/us_wxlo1_1280x720.jpg'></center></td>
 				</tr>
 			</table>
-			<!--<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KINHUNTE5&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KINHUNTE5&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>-->
 		</div>
 		<div class='div_temp' id='t0'></div>
 		<div class='div_temp' id='t1'></div>
