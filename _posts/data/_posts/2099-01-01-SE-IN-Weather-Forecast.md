@@ -87,7 +87,6 @@ published: true
 			</table>
 			<!--<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KINHUNTE5&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KINHUNTE5&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>-->
 		</div>
-
 		<div class='div_temp' id='t0'></div>
 		<div class='div_temp' id='t1'></div>
 		<div class='div_temp' id='t2'></div>
@@ -101,8 +100,6 @@ published: true
 	</body>
 	<script type='text/javascript'>
 		$(document).ready(function(){
-			
-
 			//Create the grids
 			var h = "";
 			h += "<table id='tbl_out' cellpadding=0 cellspacing=0>";
@@ -133,11 +130,9 @@ published: true
 			h += "<tr><td>WChill</td>	<td><span id='wc0'></span></td>	    <td><span id='wc1'></span></td>	    <td><span id='wc2'></span></td>	    <td><span id='wc3'></span></td>	    <td><span id='wc4'></span></td>	    <td><span id='wc5'></span></td>	    <td><span id='wc6'></span></td>	    <td><span id='wc7'></span></td>	    <td><span id='wc8'></span></td>	    <td><span id='wc9'></span></td>     <td><span id='wc10'></span></td>     <td><span id='wc11'></span></td>     <td><span id='wc12'></span></td>     <td><span id='wc13'></span></td>     <td><span id='wc14'></span></td>     <td><span id='wc15'></span></td></tr>";			
 			h += "</table>";
 			$("#div_hourly").html(h);
-
 			var url = [];
 			$.getJSON( "https://api-ak.wunderground.com/api/c991975b7f4186c0/forecast10day/hourly10day/labels/astronomy10day/lang:EN/units:english/v:2.0/bestfct:1/q/zmw:47006.1.99999.json?ttl=300", function( jd ) {
 				$.each(jd.forecast.days, function(i,day){
-					//alert(day.summary.high);
 					$("#date" + i).html(day.summary.date.month + "/" + day.summary.date.day);
 					$("#day" + i).html(day.summary.date.weekday_short);
 					$("#high" + i).html(day.summary.high);
@@ -146,50 +141,29 @@ published: true
 					$("#prec" + i).html(day.summary.pop + '%');
 					$("#hum" + i).html(day.summary.humidity_max + "-" + day.summary.humidity_min);
 					$("#wind" + i).html(day.summary.wind_max_speed + ' ' + day.summary.wind_max_dir);
-					//Get History info URL
-					var d = day.summary.date.day;
-					var mon = day.summary.date.month;
-					var yr = day.summary.date.year;
-					url[i] = "https://www.wunderground.com/history/airport/KCVG/" + yr + "/" + mon + "/" + d + "/DailyHistory.html?req_city=KCVG&req_state=KY&req_statename=Kentucky&reqdb.zip=41048&reqdb.magic=4&reqdb.wmo=99999"
 				});
-
-				var c = 0;
 				for (var ii=0; ii<10; ii++){
-					$("#t" + ii).load( url[ii] + " #historyTable", function(){
-						c++;
-						if (c == 10){
-							for (var iii=0; iii<10; iii++){
-								var html = $("#t" + iii).html();
-								var start = html.indexOf("(");
-								rechyr = html.substring(start, start+6);
-								var start = html.indexOf("(", start+1);
-								var reclyr = html.substring(start, start+6);
-								if (iii == 0){
-									$("#avgh" + iii).html( $(html).find(".wx-value:eq(3)").html() );
-										//console.log("Avg H: " + iii + ": " + $(html).find(".wx-value:eq(3)").html() );
-									$("#avgl" + iii).html( $(html).find(".wx-value:eq(6)").html() );
-										//console.log("Avg L: " + iii + ": " + $(html).find(".wx-value:eq(6)").html() );
-									$("#rech" + iii).html( $(html).find(".wx-value:eq(4)").html() + "&nbsp;" + rechyr);
-										//console.log("Rec H: " + iii + ": " + $(html).find(".wx-value:eq(4)").html() + "&nbsp;" + rechyr);
-									$("#recl" + iii).html( $(html).find(".wx-value:eq(7)").html() + "&nbsp;" + reclyr);
-										//console.log("Rec L: " + iii + ": " + $(html).find(".wx-value:eq(7)").html() + "&nbsp;" + reclyr);
-								} else {
-									$("#avgh" + iii).html( $(html).find(".wx-value:eq(1)").html() );
-										//console.log("Avg H: " + iii + ": " + $(html).find(".wx-value:eq(1)").html() );
-									$("#avgl" + iii).html( $(html).find(".wx-value:eq(3)").html() );
-										//console.log("Avg L: " + iii + ": " + $(html).find(".wx-value:eq(3)").html() );
-									$("#rech" + iii).html( $(html).find(".wx-value:eq(2)").html() + "&nbsp;" + rechyr);
-										//console.log("Rec H: " + iii + ": " + $(html).find(".wx-value:eq(2)").html() + "&nbsp;" + rechyr);
-									$("#recl" + iii).html( $(html).find(".wx-value:eq(4)").html() + "&nbsp;" + reclyr);
-										//console.log("Rec L: " + iii + ": " + $(html).find(".wx-value:eq(4)").html() + "&nbsp;" + reclyr);
-								}
-							}
-
-							$(".div_temp").remove();
-						}
+                    var today = new Date(Date.now() + 24 * 60 * 60 * 1000 * (ii+1) );
+                    var d = today.getDate();
+                    var mon = today.getMonth()+1;
+                    if (d<10){ d = '0' + d; }
+                    if (mon<10){ mon = '0' + mon; }
+				    var url = "https://api-ak.wunderground.com/api/d8585d80376a429e/history_2012" + mon + d + "/lang:EN/units:english/bestfct:1/v:2.0/q/KCVG.json?showObs=0&ttl=120";
+				    var c = 0;
+					$.getJSON(url, function(json){
+				        var max_temp =        json.history.days[0].summary.max_temperature_record;
+				        var max_temp_normal = json.history.days[0].summary.max_temperature_normal;
+				        var max_temp_year =   json.history.days[0].summary.max_temperature_record_year;
+				        var min_temp =        json.history.days[0].summary.min_temperature_record;
+				        var min_temp_normal = json.history.days[0].summary.min_temperature_normal;
+				        var min_temp_year =   json.history.days[0].summary.min_temperature_record_year;
+				        $("#avgh" + c).html( max_temp_normal );
+				        $("#avgl" + c).html( min_temp_normal );
+				        $("#rech" + c).html( max_temp + " (" + max_temp_year + ")" );
+				        $("#recl" + c).html( min_temp + " (" + min_temp_year + ")" );
+				        c++;
 					});
 				}
-
           		$.each(jd.forecast.days[0].hours, function(i,hour){
           		    var hr = hour.date.iso8601.split("T");
           		    var hr = hr[1].split(":");
@@ -228,13 +202,12 @@ published: true
           		}
 			});
 		});
-		
-		
 	</script>
-	
 </html>
 
 <!--
+	2018.11.08
+		+ Migrated to a fully client-sdie app. No need for a proxy.
 	2018.01.02 - 2018.01.03
 		+ Add section showing hourly forecast out 16hrs
 		+ Add Avg temps, Record temps and years to 10 day forecast
