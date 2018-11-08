@@ -4,12 +4,13 @@ layout: post
 title: SE IN Weather Forecast
 published: true
 ---
-
-<html>
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Weather</title>
+	    	<meta charset="utf-8"/>
 		<link rel="icon" href="http://hafer.net/favicons/weather.ico" type="image/x-icon"> 
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 		<style>
 			.b{font-weight: bold;}
 			body{}
@@ -57,17 +58,17 @@ published: true
 		<div id='div_maps'>
 			<table border=0 cellpadding=0 cellspacing=1 width=100%>
 				<tr>
-					<td width=50%><img src='http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0'></td>
-					<td width=50%><img src='http://services.intellicast.com/200904-01/576347879/Image/Radar/Radar2009.13L/Loop/SectorName/usa'></td>
+					<td width=50%><img src='http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0' alt="map" /></td>
+					<td width=50%><img src='http://services.intellicast.com/200904-01/576347879/Image/Radar/Radar2009.13L/Loop/SectorName/usa' alt="map" /></td>
 				</tr><tr>
-					<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif'></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg'></center></td>
+					<td valign=top width=50%><center><img src='http://images.intellicast.com/WxImages/CustomGraphic/wg30t.gif' alt="map" /></center></td>
+					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg' alt="map"/></center></td>
 				</tr><tr>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_30_DAY_PRECIP_1280x720.jpg'></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_90_DAY_PRECIP_1280x720.jpg'></center></td>
+					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_30_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>
+					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/CPC_90_DAY_PRECIP_1280x720.jpg' alt="map"/></center></td>
 				</tr><tr>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/acttemp_1280x720.jpg'></center></td>
-					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/us_wxlo1_1280x720.jpg'></center></td>
+					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/acttemp_1280x720.jpg' alt="map"/></center></td>
+					<td valign=top width=50%><center><img src='https://s.w-x.co/staticmaps/us_wxlo1_1280x720.jpg' alt="map"/></center></td>
 				</tr>
 			</table>
 		</div>
@@ -82,9 +83,9 @@ published: true
 		<div class='div_temp' id='t8'></div>
 		<div class='div_temp' id='t9'></div>
 	</body>
-	<script type='text/javascript'>
+	<script>
 		$(document).ready(function(){
-			//Create the grids
+			//Create the grids 
 			var h = "";
 			h += "<table id='tbl_out' cellpadding=0 cellspacing=0>";
 			h += "<tr><td>Date</td>		<td><span id='date0'></span></td>	<td><span id='date1'></span></td>	<td><span id='date2'></span></td>	<td><span id='date3'></span></td>	<td><span id='date4'></span></td>	<td><span id='date5'></span></td>	<td><span id='date6'></span></td>	<td><span id='date7'></span></td>	<td><span id='date8'></span></td>	<td><span id='date9'></span></td></tr>";
@@ -188,7 +189,6 @@ published: true
 		});
 	</script>
 </html>
-
 <!--
 	2018.11.08
 		+ Migrated to a fully client-sdie app. No need for a proxy.
